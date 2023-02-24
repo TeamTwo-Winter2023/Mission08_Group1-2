@@ -14,7 +14,7 @@ namespace Mission08_Group1_2.Models
 
         }
 
-        public DbSet<TaskAddition> Additions { get; set; }
+        public DbSet<TaskAddition> Additions { get; set; } 
 
         public DbSet<Category> Categories { get; set; }
 

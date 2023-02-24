@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore; 
 using Microsoft.Extensions.Logging;
 using Mission08_Group1_2.Models;
 
@@ -43,7 +43,9 @@ namespace Mission08_Group1_2.Controllers
         public IActionResult TaskForm()
         {
             ViewBag.Categories = _TAContext.Categories.ToList();
-            return View();
+            // ViewBag.Category = _TAContext.Categories.ToList();
+            // return View();
+            return View("TaskForm", new TaskAddition());
         }
 
         //When the Add Form is submitted
@@ -62,6 +64,7 @@ namespace Mission08_Group1_2.Controllers
             {
                 //if there were errors then re-render the form
                 ViewBag.Categories = _TAContext.Categories.ToList();
+                // ViewBag.Categories = _TAContext.Categories.ToList();
                 return View();
                 //could also do return View("TaskForm", taskAdd);?
             }

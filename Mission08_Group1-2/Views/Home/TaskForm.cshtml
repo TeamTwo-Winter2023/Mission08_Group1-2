@@ -18,27 +18,24 @@
         <input asp-for="Task" /><br />
 
         <label asp-for="DueDate">Due Date</label>
-        <input asp-for="DueDate" /><br />
+        <input asp-for="DueDate" type="date" /><br />
 
         <label asp-for="Quadrant"></label>
         <select asp-for="Quadrant">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
         </select><br />
 
         <label asp-for="CategoryID">Category</label>
         <select asp-for="CategoryID">
             <option value="">Select a Category</option>
-            @foreach (Category c in ViewBag.Category)
+            @foreach (Category c in ViewBag.Categories)
             {
                 <option value="@c.CategoryID">@c.CategoryName</option>
             }
         </select><br />
-
-        <label asp-for="Category">Category</label>
-        <input asp-for="Category" /><br />
 
         <label asp-for="Completed"></label>
         <select asp-for="Completed">
