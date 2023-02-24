@@ -1,5 +1,38 @@
 ﻿@{
     ViewData["Title"] = "Quadrants";
 }
-    
+
+@model List<TaskAddition>
+
+<!-- this page displays the quadrant of tasks w/ edit and delete options -->
+
 <h3>Here are the Quadrants!</h3>
+
+<table class="table table-bordered table-striped">
+    <thead class="font-weight-bold">
+        <tr>
+            <td>Task</td>
+            <td>Due Date</td>
+            <td>Quadrant</td>
+            <td>Category</td>
+            <td>Completed</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var x in Model)
+        {
+        <tr>
+            <td>@x.Task</td>
+            <td>@x.DueDate</td>
+            <td>@x.Quadrant</td>
+            <td>@x.Category.CategoryName</td>
+            <td>@x.Completed</td>
+
+            <td><a asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskId">Edit</a></td>
+            <td><a asp-controller="Home" asp-action="Delete" asp-route-taskid="@x.TaskId" asp->Delete</a></td>
+
+        </tr>
+        }
+    </tbody>
+</table>

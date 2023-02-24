@@ -32,7 +32,8 @@ namespace Mission08_Group1_2.Controllers
         public IActionResult Quadrants()
         {
             var tasks = _TAContext.Additions
-                .Where(x => x.Completed == true)
+                .Include(x => x.Category)
+                // .Where(x => x.Completed == true)
                 .ToList();
 
             return View(tasks);

@@ -26,6 +26,7 @@ namespace Mission08_Group1_2.Models
                 new Category { CategoryID = 3, CategoryName = "Work" },
                 new Category { CategoryID = 4, CategoryName = "Church" }
                 ); 
+
             mb.Entity<TaskAddition>().HasData(
                 new TaskAddition
                 {
