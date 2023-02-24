@@ -1,5 +1,47 @@
 ﻿@{
     ViewData["Title"] = "Quadrants";
 }
-    
+
+@model List<TaskAddition>
+
 <h3>Here are the Quadrants!</h3>
+
+
+<table class="table table-bordered table-striped">
+
+    <thead class="font-weight-bold">
+        <tr>
+            @*head of the table*@
+            <td>Task</td>
+            <td>Due Date</td>
+            <td>Category Name</td>
+            <td>Completed</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var x in Model)
+        {
+            @if (x.Quadrant == 1)
+            {
+                <tr>
+                    <td>@x.Task</td>
+                    <td>@x.DueDate</td>
+                    <td>@x.Category.CategoryName</td>
+                    <td>@x.Completed</td>
+
+
+                    @*include links to edit and delete*@
+                    <td><a asp-controller="Home" asp-action="Edit" asp-route-taskid="@x.TaskId">Edit</a></td>
+                    <td><a asp-controller="Home" asp-action="Delete" asp-route-taskid="@x.TaskId">Delete</a></td>
+
+
+                </tr>
+            }
+
+        }
+
+    </tbody>
+
+
+</table>

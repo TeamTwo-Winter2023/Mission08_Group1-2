@@ -33,6 +33,7 @@ namespace Mission08_Group1_2.Controllers
         {
             var tasks = _TAContext.Additions
                 .Where(x => x.Completed == true)
+                .Include(x => x.Category)
                 .ToList();
 
             return View(tasks);
