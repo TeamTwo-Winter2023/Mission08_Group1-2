@@ -10,7 +10,7 @@ using Mission08_Group1_2.Models;
 
 namespace Mission08_Group1_2.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Controller 
     {
         private readonly ILogger<HomeController> _logger;
 
