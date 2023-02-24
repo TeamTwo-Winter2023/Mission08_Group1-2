@@ -13,6 +13,8 @@ namespace Mission08_Group1_2.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        //the connection to the context file
+        private TaskAdditionsContext TAContext { get; set; }
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
