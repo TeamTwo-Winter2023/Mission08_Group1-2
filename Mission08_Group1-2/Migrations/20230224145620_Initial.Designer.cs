@@ -8,8 +8,8 @@ using Mission08_Group1_2.Models;
 namespace Mission08_Group1_2.Migrations
 {
     [DbContext(typeof(TaskAdditionsContext))]
-    [Migration("20230223231719_initial")]
-    partial class initial
+    [Migration("20230224145620_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -87,7 +87,7 @@ namespace Mission08_Group1_2.Migrations
                             TaskId = 1,
                             CategoryID = 1,
                             Completed = false,
-                            DueDate = "10/10/2023",
+                            DueDate = "2023-10-10",
                             Quadrant = 1,
                             Task = "Get up"
                         },
@@ -96,7 +96,7 @@ namespace Mission08_Group1_2.Migrations
                             TaskId = 2,
                             CategoryID = 2,
                             Completed = false,
-                            DueDate = "10/10/2023",
+                            DueDate = "2023-10-10",
                             Quadrant = 1,
                             Task = "Show up"
                         });

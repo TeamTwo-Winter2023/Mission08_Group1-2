@@ -85,7 +85,7 @@ namespace Mission08_Group1_2.Migrations
                             TaskId = 1,
                             CategoryID = 1,
                             Completed = false,
-                            DueDate = "10/10/2023",
+                            DueDate = "2023-10-10",
                             Quadrant = 1,
                             Task = "Get up"
                         },
@@ -94,7 +94,7 @@ namespace Mission08_Group1_2.Migrations
                             TaskId = 2,
                             CategoryID = 2,
                             Completed = false,
-                            DueDate = "10/10/2023",
+                            DueDate = "2023-10-10",
                             Quadrant = 1,
                             Task = "Show up"
                         });

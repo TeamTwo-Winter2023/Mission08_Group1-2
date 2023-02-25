@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Mission08_Group1_2.Models
 {
     public class TaskAddition
-    {
+    { 
         [Key]
         [Required]
 

@@ -1,5 +1,15 @@
 ﻿@{
-
+    ViewData["Title"] = "Delete";
 }
 
-<h3>Are you sure you want to delete _______?</h3>
+@model TaskAddition
+<!-- this page confirms the user would like to delete the selected movie entry -->
+
+<h2>Confirm Deletion</h2>
+
+<form method="post" asp-controller="Home" asp-action="Delete">
+    <button type="submit">Delete</button>
+    <a asp-controller="Home" asp-action="Quadrants" class="btn btn-primary">Cancel</a>
+
+    <input type="hidden" asp-for="TaskId" />
+</form>

@@ -2,7 +2,7 @@
 
 namespace Mission08_Group1_2.Migrations
 {
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -65,12 +65,12 @@ namespace Mission08_Group1_2.Migrations
             migrationBuilder.InsertData(
                 table: "Additions",
                 columns: new[] { "TaskId", "CategoryID", "Completed", "DueDate", "Quadrant", "Task" },
-                values: new object[] { 1, 1, false, "10/10/2023", 1, "Get up" });
+                values: new object[] { 1, 1, false, "2023-10-10", 1, "Get up" });
 
             migrationBuilder.InsertData(
                 table: "Additions",
                 columns: new[] { "TaskId", "CategoryID", "Completed", "DueDate", "Quadrant", "Task" },
-                values: new object[] { 2, 2, false, "10/10/2023", 1, "Show up" });
+                values: new object[] { 2, 2, false, "2023-10-10", 1, "Show up" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Additions_CategoryID",
