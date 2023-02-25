@@ -2,10 +2,12 @@
     ViewData["Title"] = "Quadrants";
 }
 
+@*bring in list of tasks*@
 @model List<TaskAddition>
 
 <h1 style="color: saddlebrown; text-align: center;">Here are the Quadrants!</h1><br /><br />
 
+@*add some divs to make some quadrants*@
 <div class="container">
     @*<div style="position: absolute; left: 0; top: 0; height: 100%; display: flex; align-items: center;">
 
@@ -14,11 +16,14 @@
 
     </div>*@
 
+    @*column 1*@
     <div class="row">
         <div class="col">
 
             <h1 style="color: darkblue; text-align: center;">Urgent - Important</h1>
             @*<h1 style="color: darkblue; text-align: left; margin: 0; transform: rotate(270deg); ">Important</h1>*@
+            
+            @*table in Q1*@
             <table class="table table-bordered table-striped">
 
                 <thead class="font-weight-bold">
@@ -36,6 +41,7 @@
                     @*loop through each item*@
                     @foreach (var x in Model)
                     {
+                        //make sure it is in the right category
                         @if (x.Quadrant == 1)
                         {
                             <tr>
@@ -57,6 +63,8 @@
             </table>
 
         </div>
+
+        @*Q2*@
         <div class="col">
 
             <h1 style="color: darkblue; text-align: center;">Not Urgent - Important</h1>
@@ -77,6 +85,8 @@
                     @*loop through each item*@
                     @foreach (var x in Model)
                     {
+
+                        //make sure in correct table
                         @if (x.Quadrant == 2)
                         {
                             <tr>
@@ -105,6 +115,7 @@
         <div class="w-100"></div>
         <h1>---------------------------------------------------------------------</h1>
         
+        @*Q3*@
         <div class="col">
             <h1 style="color: darkblue; text-align: center;">Urgent - Not Important</h1>
             <table class="table table-bordered table-striped">
@@ -124,6 +135,7 @@
                     @*loop through each item*@
                     @foreach (var x in Model)
                     {
+                        //checked if values are in Q3
                         @if (x.Quadrant == 3)
                         {
                             <tr>
@@ -144,9 +156,13 @@
             </table>
 
         </div>
+
+        @*Q4*@
         <div class="col">
 
             <h1 style="color: darkblue; text-align: center;">Not Urgent - Not Important</h1>
+
+            @*table for Q4*@
             <table class="table table-bordered table-striped">
                 <thead class="font-weight-bold">
                     <tr>
@@ -162,6 +178,7 @@
                     @*loop through each item*@
                     @foreach (var x in Model)
                     {
+                        //checked Q values
                         @if (x.Quadrant == 4)
                         {
                             <tr>

@@ -31,6 +31,7 @@ namespace Mission08_Group1_2.Controllers
         //Show the different Quadrants and passes the Quadrants.cshtml page a list of incomplete tasks
         public IActionResult Quadrants()
         {
+            //send the list of stuff on over
             var tasks = _TAContext.Additions
                 .Include(x => x.Category)
                 .Where(x => x.Completed == false)
