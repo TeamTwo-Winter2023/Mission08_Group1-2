@@ -25,7 +25,7 @@ namespace Mission08_Group1_2.Controllers
         //Home Page
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Quadrants");
         }
 
         //Show the different Quadrants and passes the Quadrants.cshtml page a list of incomplete tasks
@@ -44,8 +44,6 @@ namespace Mission08_Group1_2.Controllers
         public IActionResult TaskForm()
         {
             ViewBag.Categories = _TAContext.Categories.ToList();
-            // ViewBag.Category = _TAContext.Categories.ToList();
-            // return View();
             return View("TaskForm", new TaskAddition());
         }
 
@@ -116,9 +114,6 @@ namespace Mission08_Group1_2.Controllers
             _TAContext.SaveChanges();
             return RedirectToAction("Quadrants");
         }
-
-
-
 
 
         public IActionResult Privacy()
