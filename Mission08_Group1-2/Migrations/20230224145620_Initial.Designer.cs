@@ -8,11 +8,7 @@ using Mission08_Group1_2.Models;
 namespace Mission08_Group1_2.Migrations
 {
     [DbContext(typeof(TaskAdditionsContext))]
-<<<<<<<< HEAD:Mission08_Group1-2/Migrations/20230224064501_Initial.Designer.cs
     [Migration("20230224064501_Initial")]
-========
-    [Migration("20230224145620_Initial")]
->>>>>>>> master:Mission08_Group1-2/Migrations/20230224145620_Initial.Designer.cs
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
