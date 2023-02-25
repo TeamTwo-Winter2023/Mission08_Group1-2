@@ -7,22 +7,44 @@
 
 <h1 style="color: saddlebrown; text-align: center;">Here are the Quadrants!</h1><br /><br />
 
-@*add some divs to make some quadrants*@
+
 <div class="container">
-    @*<div style="position: absolute; left: 0; top: 0; height: 100%; display: flex; align-items: center;">
 
-        <h3 style="color: darkblue; writing-mode: vertical-rl; transform: rotate(180deg); ">Not Important--------
-            Important</h3>
-
-    </div>*@
-
-    @*column 1*@
     <div class="row">
-        <div class="col">
 
-            <h1 style="color: darkblue; text-align: center;">Urgent - Important</h1>
-            @*<h1 style="color: darkblue; text-align: left; margin: 0; transform: rotate(270deg); ">Important</h1>*@
-            
+        @*column 1 - just blank*@
+        <div class="col-1"></div>
+
+        @*column 2 - title*@
+        <div class="col-5">
+            <h1 style="color: darkblue; text-align: center;">Urgent</h1>
+        </div>
+
+        @*column 3 - title*@
+        <div class="col-5">
+            <h1 style="color: darkblue; text-align: center;">Not Urgent</h1>
+        </div>
+
+    </div>
+
+    @*divider*@
+    <div class="w-100">
+        <h1>-------------------------------------------------------------------</h1>
+    </div>
+
+
+    @*Row 2*@
+    <div class="row">
+
+        @*column 1 - Title*@
+        <div class="col-1">
+            <br /><br /><br />
+            <h3 style="color: darkblue; display: flex; justify-content: center; transform: rotate(270deg);">Important</h3>
+        </div>
+
+        @*column 2 - Q1*@
+        <div class="col-6">
+
             @*table in Q1*@
             <table class="table table-bordered table-striped">
 
@@ -64,10 +86,9 @@
 
         </div>
 
-        @*Q2*@
-        <div class="col">
+        @*column 3 - Q2*@
+        <div class="col-5">
 
-            <h1 style="color: darkblue; text-align: center;">Not Urgent - Important</h1>
             <table class="table table-bordered table-striped">
 
                 <thead class="font-weight-bold">
@@ -103,21 +124,28 @@
 
                             </tr>
                         }
-
                     }
-
                 </tbody>
-
-
             </table>
-
         </div>
-        <div class="w-100"></div>
-        <h1>---------------------------------------------------------------------</h1>
-        
-        @*Q3*@
-        <div class="col">
-            <h1 style="color: darkblue; text-align: center;">Urgent - Not Important</h1>
+    </div>
+
+    <div class="w-100">
+        <h1>-------------------------------------------------------------------</h1>
+    </div>
+
+    @*Row 3*@
+    <div class="row">
+
+        @*column 1 Title*@
+        <div class="col-1">
+            <br /><br /><br />
+                  <h3 style="color: darkblue; display: flex; justify-content: center; transform: rotate(270deg);">Not Important</h3>
+        </div>
+
+        @*column 2 - Q3*@
+        <div class="col-6">
+
             <table class="table table-bordered table-striped">
 
                 <thead class="font-weight-bold">
@@ -157,10 +185,8 @@
 
         </div>
 
-        @*Q4*@
-        <div class="col">
-
-            <h1 style="color: darkblue; text-align: center;">Not Urgent - Not Important</h1>
+        @*column 3 - Q4*@
+        <div class="col-5">
 
             @*table for Q4*@
             <table class="table table-bordered table-striped">
@@ -195,11 +221,7 @@
                         }
                     }
                 </tbody>
-
             </table>
-
         </div>
     </div>
 </div>
-
-
